@@ -2,28 +2,41 @@
 Ready-to-use Class Library for Statistical Computations
 
 ## Usage
-To use the methods, it is necessary to declare a list in your code
-
+To use this library, it is necessary to create an instance of DataSet collection 
 ```csharp
-List<double> "YourListName" = new List<double>();
+DataSet<T> "YourDataSetName" = new DataSet<T>();
+```
+DataSet collection class is inherited from C# List collection class
+```csharp
+public class DataSet<T> : List<T>
 ```
 
-It is recommended to use a DataGridView control in the GUI
+## Class Structure
 
-## Methods List
+DataSet<T>               |
+-------------            |
+Pattern: struct          |
+Pattern.Stationary: bool |
+Pattern.Trending: bool   |
+Pattern.Trending: bool   |
+MinimumValue: double     |
+MaximumValue: double     |
+Range: double            |
+  
+Parameters    |
+------------- |
+Mean(DataSet<double>): double|
+StandartDeviation(DataSet<double>): double|
+Skewness(DataSet<double>)|
+Covariance(DataSet<double>): double|
+CorrelationCoefficient(DataSet<double>): double|
+Zvalue(DataSet<double>, double, double): double|
+Ztest((DataSet<double>, double, double, double, double, bool): bool|
 
-```csharp
-public static class StatisticalCalculations
-```
-
-* GeneratingCollectionMembers
-* Mean
-* StandartDeviation
-* Skewness
-* Covariance
-* CorrelationCoefficient
-* Zvalue
-* Ztest
+Generators<T>|
+-------------|
+GeneratingFromDataGridView(DataSet<T>, DataGridView): void +3 overloads|
+GeneratingFromListBox(DataSet<T>, ListBox): void +3 overloads|
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

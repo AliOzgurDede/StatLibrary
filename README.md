@@ -15,10 +15,7 @@ public class DataSet<T> : List<T>
 
 DataSet<T>               |
 -------------            |
-Pattern: struct          |
-Pattern.Stationary: bool |
-Pattern.Trending: bool   |
-Pattern.Trending: bool   |
+Pattern (Stationary, Trending, Seasonal): enum |
 MinimumValue: double     |
 MaximumValue: double     |
 Range: double            |
@@ -27,7 +24,7 @@ Parameters    |
 ------------- |
 Mean(DataSet<double>): double|
 StandartDeviation(DataSet<double>): double|
-Skewness(DataSet<double>)|
+Skewness(DataSet<double>): double|
 Covariance(DataSet<double>): double|
 CorrelationCoefficient(DataSet<double>): double|
 Zvalue(DataSet<double>, double, double): double|

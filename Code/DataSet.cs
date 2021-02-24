@@ -42,25 +42,21 @@ namespace StatLibrary
         /// </summary>
         public double MinimumValue
         {
-            get { return minimumValue; }
-        }
-        private double minimumValue
-        {
-            get { return minimumValue; }
-            set { minimumValue = Double.Parse(this.Min().ToString()); }
+            get
+            {
+                return Convert.ToDouble(this.Min());
+            }
         }
 
         /// <summary>
-        /// Gets the minimum value of DataSet
+        /// Gets the maximum value of DataSet
         /// </summary>
         public double MaximumValue
         {
-            get { return maximumValue; }
-        }
-        private double maximumValue
-        {
-            get { return maximumValue; }
-            set { maximumValue = Double.Parse(this.Max().ToString()); }
+            get
+            {
+                return Convert.ToDouble(this.Max());
+            }
         }
 
         /// <summary>
@@ -68,12 +64,10 @@ namespace StatLibrary
         /// </summary>
         public double Range
         {
-            get { return range; }
-        }
-        private double range
-        {
-            get { return range; }
-            set { range = this.MaximumValue - this.MinimumValue; }
+            get
+            {
+                return (this.MaximumValue - this.MinimumValue);
+            }
         }
     }
 }

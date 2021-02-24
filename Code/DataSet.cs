@@ -16,13 +16,25 @@ namespace StatLibrary
     public class DataSet<T> : List<T>
     {
         /// <summary>
-        /// Pattern identification structure of DataSet
+        /// Gets or sets the pattern characteristic of DataSet
         /// </summary>
-        public struct Pattern
+        public DataSetPattern Pattern
         {
-            public bool Stationary;
-            public bool Trending;
-            public bool Seasonal;
+            get
+            {
+                return pattern;
+            }
+            set
+            {
+                pattern = value;
+            }
+        }
+        private DataSetPattern pattern;
+        public enum DataSetPattern
+        {
+            Stationary,
+            Trending,
+            Seasonal
         }
 
         /// <summary>
@@ -63,6 +75,5 @@ namespace StatLibrary
             get { return range; }
             set { range = this.MaximumValue - this.MinimumValue; }
         }
-
     }
 }

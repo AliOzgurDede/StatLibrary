@@ -15,6 +15,11 @@ namespace StatLibrary
     /// <typeparam name="T"></typeparam>
     public class DataSet<T> : List<T>
     {
+        public DataSet()
+        {
+            this.Pattern = DataSetPattern.None;
+        }
+        
         /// <summary>
         /// Gets or sets the pattern characteristic of DataSet
         /// </summary>

@@ -15,25 +15,34 @@ public class DataSet<T> : List<T>
 
 DataSet<T>               |
 -------------            |
-Pattern (Stationary, Trending, Seasonal): enum |
+Pattern [Stationary, Trending, Seasonal]: enum |
 MinimumValue: double     |
 MaximumValue: double     |
 Range: double            |
-  
+Slope: double            |
+Intercept: double        |
+NumberOfSeasons: int     |
+SeasonSize: int          |
+SeasonalFactors[ ]: double  |
+MovingAverages(int Index, int Step): double  |
+ExponentialSmoothing(int Index, double Alpha): double  |
+LinearRegression(double X): double  |
+Estimate(int Index): double  |
+
 Parameters    |
 ------------- |
-Mean(DataSet<double>): double|
-StandartDeviation(DataSet<double>): double|
-Skewness(DataSet<double>): double|
-Covariance(DataSet<double>): double|
-CorrelationCoefficient(DataSet<double>): double|
-Zvalue(DataSet<double>, double, double): double|
-Ztest((DataSet<double>, double, double, double, double, bool): bool|
+Mean(DataSet<double>): static double|
+StandartDeviation(DataSet(double)): static double|
+Skewness(DataSet(double)): static double|
+Covariance(DataSet(double)): static double|
+CorrelationCoefficient(DataSet(double)): static double|
+Zvalue(DataSet(double), double, double): static double|
+Ztest((DataSet(double), double, double, double, double, bool): static bool|
 
 Generators<T>|
 -------------|
-GeneratingFromDataGridView(DataSet<T>, DataGridView): void +3 overloads|
-GeneratingFromListBox(DataSet<T>, ListBox): void +3 overloads|
+GeneratingFromDataGridView(DataSet(T), DataGridView): static void +3 overloads|
+GeneratingFromListBox(DataSet(T), ListBox): static void +3 overloads|
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
